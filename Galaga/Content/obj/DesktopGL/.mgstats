@@ -1,0 +1,3 @@
+Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"C:/Users/A-27/source/repos/Galaga/Content/fondo.jpg","C:/Users/A-27/source/repos/Galaga/Content/bin/DesktopGL/fondo.xnb","TextureProcessor","Texture2DContent",174370,2668085,0,1694493
+"C:/Users/A-27/source/repos/Galaga/Content/heart.png","C:/Users/A-27/source/repos/Galaga/Content/bin/DesktopGL/heart.xnb","TextureProcessor","Texture2DContent",32483,419125,0,0120849
