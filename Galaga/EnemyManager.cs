@@ -8,58 +8,63 @@ namespace Galaga.Managers
 {
     public class EnemyManager
     {
-        private List<Enemy> _enemies;
-        private Texture2D _enemyTexture;
-        private Random _random;
-        private float _spawnTimer;
-        private float _spawnInterval = 1.5f;
 
-        public List<Enemy> Enemies => _enemies;
-
+        private List<Enemy> enemigos;
+        private Texture2D texturaEnemigos;
+        private Random random;
+        private float tiempoSpawn;
+        private float intervaloSpawn = 1f;
+        private int contadorescapeEnemigo;
+        public int ContadorEscapeEnemigo => contadorescapeEnemigo;
+        public List<Enemy> Enemigos => enemigos;
 
         public EnemyManager(Texture2D enemyTexture)
         {
-            _enemies = new List<Enemy>();
-            _enemyTexture = enemyTexture;
-            _random = new Random();
+            enemigos = new List<Enemy>();
+            texturaEnemigos = enemyTexture;
+            random = new Random();
+            contadorescapeEnemigo = 0;
+
         }
 
-
-        public void Update(GameTime gameTime)
+        public void Update(GameTime gameTime, Player jugador)
         {
-            _spawnTimer += (float)gameTime.ElapsedGameTime.TotalSeconds;
+            tiempoSpawn += (float)gameTime.ElapsedGameTime.TotalSeconds;
 
-            if (_spawnTimer >= _spawnInterval)
+            if (tiempoSpawn >= intervaloSpawn)
             {
                 SpawnEnemy();
-                _spawnTimer = 0f;
+                tiempoSpawn = 0f;
             }
 
-            foreach (var enemy in _enemies)
+            foreach (var enemigo in enemigos)
             {
-                enemy.Update(gameTime);
+                enemigo.Update(gameTime);
             }
 
-
-            _enemies.RemoveAll(e => e.Bounds.Top > 720);
+            int enemigosEscapados = enemigos.RemoveAll(e => e.Bounds.Top > 1080); 
+            if (enemigosEscapados > 0)
+            {
+                jugador.TakeDamage(enemigosEscapados); 
+            }
         }
 
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            foreach (var enemy in _enemies)
+            foreach (var enemigo in enemigos)
             {
-                enemy.Draw(spriteBatch);
+                enemigo.Draw(spriteBatch);
             }
         }
 
         private void SpawnEnemy()
         {
 
-            int xPosition = _random.Next(0, 1280 - _enemyTexture.Width);
-            int yPosition = -_enemyTexture.Height;
+            int xPosition = random.Next(0, 1920 - texturaEnemigos.Width);
+            int yPosition = -texturaEnemigos.Height;
 
-            _enemies.Add(new Enemy(_enemyTexture, new Vector2(xPosition, yPosition)));
+            enemigos.Add(new Enemy(texturaEnemigos, new Vector2(xPosition, yPosition)));
         }
 
     }

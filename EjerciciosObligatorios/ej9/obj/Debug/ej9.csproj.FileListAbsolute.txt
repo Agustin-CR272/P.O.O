@@ -1,0 +1,14 @@
+C:\xampp\htdocs\Portero 5°10°\POO-for-Fiscella\Ejers Obligatorios\ej9\obj\Debug\ej9.csproj.AssemblyReference.cache
+C:\xampp\htdocs\Portero 5°10°\POO-for-Fiscella\Ejers Obligatorios\ej9\obj\Debug\ej9.csproj.CoreCompileInputs.cache
+C:\xampp\htdocs\Portero 5°10°\POO-for-Fiscella\Ejers Obligatorios\ej9\bin\Debug\ej9.exe.config
+C:\xampp\htdocs\Portero 5°10°\POO-for-Fiscella\Ejers Obligatorios\ej9\bin\Debug\ej9.exe
+C:\xampp\htdocs\Portero 5°10°\POO-for-Fiscella\Ejers Obligatorios\ej9\bin\Debug\ej9.pdb
+C:\xampp\htdocs\Portero 5°10°\POO-for-Fiscella\Ejers Obligatorios\ej9\obj\Debug\ej9.exe
+C:\xampp\htdocs\Portero 5°10°\POO-for-Fiscella\Ejers Obligatorios\ej9\obj\Debug\ej9.pdb
+C:\Users\camat\OneDrive\Documentos\P.O.O\POO-for-Fiscella\Ejers Obligatorios\ej9\bin\Debug\ej9.exe.config
+C:\Users\camat\OneDrive\Documentos\P.O.O\POO-for-Fiscella\Ejers Obligatorios\ej9\bin\Debug\ej9.exe
+C:\Users\camat\OneDrive\Documentos\P.O.O\POO-for-Fiscella\Ejers Obligatorios\ej9\bin\Debug\ej9.pdb
+C:\Users\camat\OneDrive\Documentos\P.O.O\POO-for-Fiscella\Ejers Obligatorios\ej9\obj\Debug\ej9.csproj.AssemblyReference.cache
+C:\Users\camat\OneDrive\Documentos\P.O.O\POO-for-Fiscella\Ejers Obligatorios\ej9\obj\Debug\ej9.csproj.CoreCompileInputs.cache
+C:\Users\camat\OneDrive\Documentos\P.O.O\POO-for-Fiscella\Ejers Obligatorios\ej9\obj\Debug\ej9.exe
+C:\Users\camat\OneDrive\Documentos\P.O.O\POO-for-Fiscella\Ejers Obligatorios\ej9\obj\Debug\ej9.pdb

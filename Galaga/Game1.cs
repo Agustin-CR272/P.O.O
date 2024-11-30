@@ -1,194 +1,216 @@
 ﻿using Galaga.GameObjects;
 using Galaga.Managers;
-using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework;
 using System.Collections.Generic;
+using System;
+using Microsoft.Xna.Framework.Input;
 
 namespace Galaga
 {
     public class Game1 : Game
     {
-        private GraphicsDeviceManager _graphics;
-        private SpriteBatch _spriteBatch;
-
-        private Player _player;
-        private EnemyManager _enemyManager;
-        private List<Bullet> _bullets;
-
-        private Texture2D _playerTexture;
-        private Texture2D _enemyTexture;
-        private Texture2D _bulletTexture;
-        private Texture2D _heartTexture;
-        private Texture2D _backgroundTexture;
-        private Texture2D _scoreBackgroundTexture;  // Fondo del cartel de puntaje
-
-        private bool _canShoot = true;
-        private Rectangle _mapBounds;
-        private int _score;
-        private SpriteFont _scoreFont;
+        private GraphicsDeviceManager graficos;
+        private SpriteBatch imagenes;
+        private Player jugador;
+        private EnemyManager aparecerEnemigos;
+        private List<Bullet> balas;
+        private Texture2D texturaJugador;
+        private Texture2D texturaEnemigo;
+        private Texture2D texturaBala;
+        private Texture2D texturaCorazones;
+        private Texture2D texturaFondo;
+        private bool poderDisparar = true;
+        private bool juegoIniciado = false;
+        private bool juegoCompleto = false;
+        private int puntaje;
+        private SpriteFont fondoPuntaje;
 
         public Game1()
         {
-            _graphics = new GraphicsDeviceManager(this);
+            graficos = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
         }
 
         protected override void Initialize()
         {
-            _score = 0;
-            _graphics.PreferredBackBufferWidth = 1920;
-            _graphics.PreferredBackBufferHeight = 1080;
-            _graphics.ApplyChanges();
+            puntaje = 0;
+            graficos.PreferredBackBufferWidth = 1920;
+            graficos.PreferredBackBufferHeight = 1080;
+            graficos.ApplyChanges();
 
             base.Initialize();
         }
 
         protected override void LoadContent()
         {
-            _spriteBatch = new SpriteBatch(GraphicsDevice);
+            imagenes = new SpriteBatch(GraphicsDevice);
+            texturaJugador = Content.Load<Texture2D>("player");
+            texturaEnemigo = Content.Load<Texture2D>("enemy");
+            texturaBala = Content.Load<Texture2D>("bullet");
+            texturaCorazones = Content.Load<Texture2D>("heart");
+            texturaFondo = Content.Load<Texture2D>("fondo");
+            fondoPuntaje = Content.Load<SpriteFont>("ScoreFont");
+            jugador = new Player(texturaJugador, new Vector2(400, 900));
+            aparecerEnemigos = new EnemyManager(texturaEnemigo);
+            balas = new List<Bullet>();
 
-            _playerTexture = Content.Load<Texture2D>("player");
-            _enemyTexture = Content.Load<Texture2D>("enemy");
-            _bulletTexture = Content.Load<Texture2D>("bullet");
-            _heartTexture = Content.Load<Texture2D>("heart");
-            _backgroundTexture = Content.Load<Texture2D>("fondo");
-            _scoreBackgroundTexture = Content.Load<Texture2D>("scoreBackground"); // Carga el fondo del cartel
-
-            _scoreFont = Content.Load<SpriteFont>("ScoreFont");  // Asegúrate de tener un archivo ScoreFont.spritefont
-
-            _player = new Player(_playerTexture, new Vector2(400, 500));
-            _enemyManager = new EnemyManager(_enemyTexture);
-            _bullets = new List<Bullet>();
-
-            _mapBounds = new Rectangle(0, 0, 1280, 720);
         }
 
         protected override void Update(GameTime gameTime)
         {
             var keyboardState = Keyboard.GetState();
-            float deltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
 
-            if (keyboardState.IsKeyDown(Keys.Escape))
-                Exit();
-
-            Vector2 movement = Vector2.Zero;
-
-            if (keyboardState.IsKeyDown(Keys.A))
-                movement.X -= 1;
-
-            if (keyboardState.IsKeyDown(Keys.D))
-                movement.X += 1;
-
-            if (keyboardState.IsKeyDown(Keys.W))
-                movement.Y -= 1;
-
-            if (keyboardState.IsKeyDown(Keys.S))
-                movement.Y += 1;
-
-            if (movement != Vector2.Zero)
-                movement.Normalize();
-
-            if (keyboardState.IsKeyDown(Keys.Space) && _canShoot)
+            if (!juegoIniciado)
             {
-                _bullets.Add(new Bullet(_bulletTexture, new Vector2(_player.Position.X + 20, _player.Position.Y)));
-                _canShoot = false;
+                if (keyboardState.IsKeyDown(Keys.Space))
+                {
+                    juegoIniciado = true;
+                }
+                return; // Salimos de Update si el juego no ha comenzado
             }
 
-            if (keyboardState.IsKeyUp(Keys.Space))
+            if (juegoCompleto)
             {
-                _canShoot = true;
+                if (keyboardState.IsKeyDown(Keys.Escape))
+                {
+                    Exit();
+                }
+                return; // Salimos de Update si el juego ya terminó
             }
 
-            _player.Update(gameTime);
-            _enemyManager.Update(gameTime);
-
-            foreach (var bullet in _bullets)
-                bullet.Update(gameTime);
-
-            _bullets.RemoveAll(b => b.Bounds.Bottom < 0);
-
-            HandleCollisions();
-
-            if (_player.Lives <= 0)
+            if (jugador != null)
             {
-                Exit();
+                float deltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
+
+                if (keyboardState.IsKeyDown(Keys.Escape))
+                    Exit();
+
+                if (keyboardState.IsKeyDown(Keys.Space) && poderDisparar)
+                {
+                    balas.Add(new Bullet(texturaBala, new Vector2(jugador.Posicion.X + 32, jugador.Posicion.Y)));
+                    poderDisparar = false;
+                }
+
+                if (keyboardState.IsKeyUp(Keys.Space))
+                {
+                    poderDisparar = true;
+                }
+
+                jugador.Update(gameTime);
+                aparecerEnemigos.Update(gameTime, jugador); // Pasamos el jugador al EnemyManager
+
+                foreach (var bala in balas)
+                    bala.Update(gameTime);
+                balas.RemoveAll(b => b.Bounds.Bottom < 0);
+
+                HandleCollisions();
+
+                // Revisar si el jugador perdió todas las vidas
+                if (jugador.Lives <= 0)
+                {
+                    jugador = null; // Eliminar al jugador
+                    juegoCompleto = true;
+                }
             }
 
             base.Update(gameTime);
         }
 
+
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
+            imagenes.Begin();
+            imagenes.Draw(texturaFondo, new Rectangle(0, 0, 1920, 1080), Color.White);
 
-            _spriteBatch.Begin();
-            _spriteBatch.Draw(_backgroundTexture, new Rectangle(0, 0, 1920, 1080), Color.White);
-
-            // Dibujar el cartel de puntaje en la parte superior de la pantalla
-            int scoreBarHeight = 60; // Altura del cartel
-            _spriteBatch.Draw(_scoreBackgroundTexture, new Rectangle(0, 0, _graphics.PreferredBackBufferWidth, scoreBarHeight), Color.Gray);
-
-            // Dibujar el puntaje sobre el fondo
-            _spriteBatch.DrawString(_scoreFont, "Score: " + _score, new Vector2(20, 20), Color.White);
-
-            _player.Draw(_spriteBatch);
-            _enemyManager.Draw(_spriteBatch);
-
-            foreach (var bullet in _bullets)
-                bullet.Draw(_spriteBatch);
-
-            // Dibujar las vidas
-            float heartSize = 0.25f;
-            int heartSpacing = 5;
-            int heartWidth = (int)(_heartTexture.Width * heartSize);
-            int heartHeight = (int)(_heartTexture.Height * heartSize);
-
-            for (int i = 0; i < _player.Lives; i++)
+            if (!juegoIniciado)
             {
-                int x = 10 + i * (heartWidth + heartSpacing);
-                int y = _graphics.PreferredBackBufferHeight - heartHeight - 10;
-                _spriteBatch.Draw(_heartTexture, new Vector2(x, y), null, Color.White, 0f, Vector2.Zero, heartSize, SpriteEffects.None, 0f);
+                string startMessage = "Presione [ESPACIO] para comenzar";
+                Vector2 messageSize = fondoPuntaje.MeasureString(startMessage);
+                Vector2 messagePosition = new Vector2(
+                    (graficos.PreferredBackBufferWidth - messageSize.X) / 2,
+                    (graficos.PreferredBackBufferHeight - messageSize.Y) / 2);
+                imagenes.DrawString(fondoPuntaje, startMessage, messagePosition, Color.White);
+            }
+            else if (puntaje >= 1000)
+            {
+                string winMessage = "Victoria. Has logrado salvar al mundo de los aliens.";
+                Vector2 winMessageSize = fondoPuntaje.MeasureString(winMessage);
+                Vector2 winMessagePosition = new Vector2(
+                    (graficos.PreferredBackBufferWidth - winMessageSize.X) / 2,
+                    (graficos.PreferredBackBufferHeight - winMessageSize.Y) / 2);
+                imagenes.DrawString(fondoPuntaje, winMessage, winMessagePosition, Color.White);
+            }
+            else if (juegoCompleto && jugador == null)
+            {
+                string loseMessage = "Fin del juego. Los aliens destruyeron el mundo.";
+                Vector2 loseMessageSize = fondoPuntaje.MeasureString(loseMessage);
+                Vector2 loseMessagePosition = new Vector2(
+                    (graficos.PreferredBackBufferWidth - loseMessageSize.X) / 2,
+                    (graficos.PreferredBackBufferHeight - loseMessageSize.Y) / 2);
+                imagenes.DrawString(fondoPuntaje, loseMessage, loseMessagePosition, Color.White);
+            }
+            else
+            {
+                jugador?.Draw(imagenes); 
+                aparecerEnemigos.Draw(imagenes);
+
+                foreach (var bala in balas)
+                    bala.Draw(imagenes);
+
+                float tamañoCorazones = 0.25f;
+                int espacioCorazones = 5;
+                int anchoCorazones = (int)(texturaCorazones.Width * tamañoCorazones);
+                int altoCorazones = (int)(texturaCorazones.Height * tamañoCorazones);
+
+                for (int i = 0; i < jugador?.Lives; i++)
+                {
+                    int x = 10 + i * (anchoCorazones + espacioCorazones);
+                    int y = graficos.PreferredBackBufferHeight - altoCorazones - 10;
+                    imagenes.Draw(texturaCorazones, new Vector2(x, y), null, Color.White, 0f, Vector2.Zero, tamañoCorazones, SpriteEffects.None, 0f);
+                }
+
+                imagenes.DrawString(fondoPuntaje, $"Puntaje: {puntaje}", new Vector2(20, 20), Color.White);
             }
 
-            _spriteBatch.End();
-
+            imagenes.End();
             base.Draw(gameTime);
         }
 
         private void HandleCollisions()
         {
-            var enemiesToRemove = new List<Enemy>();
-            var bulletsToRemove = new List<Bullet>();
+            var enemigosRemovidos = new List<Enemy>();
+            var balasRemovidas = new List<Bullet>();
 
-            foreach (var bullet in _bullets)
+            foreach (var bala in balas)
             {
-                foreach (var enemy in _enemyManager.Enemies)
+                foreach (var enemigo in aparecerEnemigos.Enemigos)
                 {
-                    if (bullet.Bounds.Intersects(enemy.Bounds))
+                    if (bala.Bounds.Intersects(enemigo.Bounds))
                     {
-                        bulletsToRemove.Add(bullet);
-                        enemiesToRemove.Add(enemy);
-                        _score += 10;  // Aumenta el puntaje por cada enemigo eliminado
+                        balasRemovidas.Add(bala);
+                        enemigosRemovidos.Add(enemigo);
+                        puntaje += 10;
                     }
                 }
             }
 
-            foreach (var enemy in _enemyManager.Enemies)
+            foreach (var enemigo in aparecerEnemigos.Enemigos)
             {
-                if (_player.Bounds.Intersects(enemy.Bounds))
+                if (jugador.Bounds.Intersects(enemigo.Bounds))
                 {
-                    _player.TakeDamage();
-                    enemiesToRemove.Add(enemy);
+                    jugador.TakeDamage();
+                    enemigosRemovidos.Add(enemigo);
                 }
             }
 
-            foreach (var bullet in bulletsToRemove)
-                _bullets.Remove(bullet);
+            foreach (var bala in balasRemovidas)
+                balas.Remove(bala);
 
-            foreach (var enemy in enemiesToRemove)
-                _enemyManager.Enemies.Remove(enemy);
+            foreach (var enemigo in enemigosRemovidos)
+                aparecerEnemigos.Enemigos.Remove(enemigo);
         }
     }
 }
