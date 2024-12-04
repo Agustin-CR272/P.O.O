@@ -1,7 +1,0 @@
-C:\Users\camat\OneDrive\Documentos\P.O.O\POO-for-Fiscella\Ejers Obligatorios\ej10\bin\Debug\ej10.exe.config
-C:\Users\camat\OneDrive\Documentos\P.O.O\POO-for-Fiscella\Ejers Obligatorios\ej10\bin\Debug\ej10.exe
-C:\Users\camat\OneDrive\Documentos\P.O.O\POO-for-Fiscella\Ejers Obligatorios\ej10\bin\Debug\ej10.pdb
-C:\Users\camat\OneDrive\Documentos\P.O.O\POO-for-Fiscella\Ejers Obligatorios\ej10\obj\Debug\ej10.csproj.AssemblyReference.cache
-C:\Users\camat\OneDrive\Documentos\P.O.O\POO-for-Fiscella\Ejers Obligatorios\ej10\obj\Debug\ej10.csproj.CoreCompileInputs.cache
-C:\Users\camat\OneDrive\Documentos\P.O.O\POO-for-Fiscella\Ejers Obligatorios\ej10\obj\Debug\ej10.exe
-C:\Users\camat\OneDrive\Documentos\P.O.O\POO-for-Fiscella\Ejers Obligatorios\ej10\obj\Debug\ej10.pdb

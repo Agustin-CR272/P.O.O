@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pXOJ4ijbchuXViyeUQHsjWCXGbxKaDisiB9GNRb2PnObfKXglFxAzJTmcG/bMU4O6UC6DkAAi4YCtHEtzg4+Jg==",
+  "dgSpecHash": "kPxPUAiLk8kpIALTWyI04fxyb2VyKj+6jkOY66KwhV/kLl+E8WTXEK++FAkzPp/6bceq9qEOA6mvZwB7N2A+pQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\camat\\source\\repos\\Galaga\\Galaga.csproj",
+  "projectFilePath": "C:\\Users\\camat\\OneDrive\\Documentos\\P.O.O\\Galaga\\Galaga.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\camat\\.nuget\\packages\\libuv\\1.9.1\\libuv.1.9.1.nupkg.sha512",
     "C:\\Users\\camat\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\1.1.0\\microsoft.codeanalysis.analyzers.1.1.0.nupkg.sha512",

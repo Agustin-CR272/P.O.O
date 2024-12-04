@@ -1,25 +1,25 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\camat\\source\\repos\\Galaga\\",
+  "WorkspaceRootPath": "C:\\Users\\camat\\OneDrive\\Documentos\\P.O.O\\Galaga\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FAB84C3D-77D3-4E45-97A4-3DF48E741342}|Galaga.csproj|C:\\Users\\camat\\source\\repos\\Galaga\\enemymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FAB84C3D-77D3-4E45-97A4-3DF48E741342}|Galaga.csproj|solutionrelative:enemymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FAB84C3D-77D3-4E45-97A4-3DF48E741342}|Galaga.csproj|C:\\Users\\camat\\source\\repos\\Galaga\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FAB84C3D-77D3-4E45-97A4-3DF48E741342}|Galaga.csproj|solutionrelative:enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FAB84C3D-77D3-4E45-97A4-3DF48E741342}|Galaga.csproj|c:\\users\\camat\\source\\repos\\galaga\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FAB84C3D-77D3-4E45-97A4-3DF48E741342}|Galaga.csproj|solutionrelative:player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FAB84C3D-77D3-4E45-97A4-3DF48E741342}|Galaga.csproj|C:\\Users\\camat\\source\\repos\\Galaga\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FAB84C3D-77D3-4E45-97A4-3DF48E741342}|Galaga.csproj|C:\\Users\\camat\\OneDrive\\Documentos\\P.O.O\\Galaga\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FAB84C3D-77D3-4E45-97A4-3DF48E741342}|Galaga.csproj|solutionrelative:game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FAB84C3D-77D3-4E45-97A4-3DF48E741342}|Galaga.csproj|C:\\Users\\camat\\source\\repos\\Galaga\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FAB84C3D-77D3-4E45-97A4-3DF48E741342}|Galaga.csproj|C:\\Users\\camat\\OneDrive\\Documentos\\P.O.O\\Galaga\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAB84C3D-77D3-4E45-97A4-3DF48E741342}|Galaga.csproj|solutionrelative:player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAB84C3D-77D3-4E45-97A4-3DF48E741342}|Galaga.csproj|c:\\users\\camat\\onedrive\\documentos\\p.o.o\\galaga\\enemymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAB84C3D-77D3-4E45-97A4-3DF48E741342}|Galaga.csproj|solutionrelative:enemymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAB84C3D-77D3-4E45-97A4-3DF48E741342}|Galaga.csproj|C:\\Users\\camat\\OneDrive\\Documentos\\P.O.O\\Galaga\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAB84C3D-77D3-4E45-97A4-3DF48E741342}|Galaga.csproj|solutionrelative:enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAB84C3D-77D3-4E45-97A4-3DF48E741342}|Galaga.csproj|C:\\Users\\camat\\OneDrive\\Documentos\\P.O.O\\Galaga\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FAB84C3D-77D3-4E45-97A4-3DF48E741342}|Galaga.csproj|solutionrelative:bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -30,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,65 +62,63 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "EnemyManager.cs",
-              "DocumentMoniker": "C:\\Users\\camat\\source\\repos\\Galaga\\EnemyManager.cs",
+              "DocumentMoniker": "C:\\Users\\camat\\OneDrive\\Documentos\\P.O.O\\Galaga\\EnemyManager.cs",
               "RelativeDocumentMoniker": "EnemyManager.cs",
-              "ToolTip": "C:\\Users\\camat\\source\\repos\\Galaga\\EnemyManager.cs",
+              "ToolTip": "C:\\Users\\camat\\OneDrive\\Documentos\\P.O.O\\Galaga\\EnemyManager.cs",
               "RelativeToolTip": "EnemyManager.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAiwA8AAAAoAAAA",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAiwA8AAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-28T22:19:04.216Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Player.cs",
-              "DocumentMoniker": "C:\\Users\\camat\\source\\repos\\Galaga\\Player.cs",
+              "DocumentMoniker": "C:\\Users\\camat\\OneDrive\\Documentos\\P.O.O\\Galaga\\Player.cs",
               "RelativeDocumentMoniker": "Player.cs",
-              "ToolTip": "C:\\Users\\camat\\source\\repos\\Galaga\\Player.cs",
+              "ToolTip": "C:\\Users\\camat\\OneDrive\\Documentos\\P.O.O\\Galaga\\Player.cs",
               "RelativeToolTip": "Player.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAAAJAAAA",
+              "ViewState": "AQIAAA0AAAAAAAAAAAA1wCIAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-30T02:24:44.128Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Enemy.cs",
-              "DocumentMoniker": "C:\\Users\\camat\\source\\repos\\Galaga\\Enemy.cs",
+              "DocumentMoniker": "C:\\Users\\camat\\OneDrive\\Documentos\\P.O.O\\Galaga\\Enemy.cs",
               "RelativeDocumentMoniker": "Enemy.cs",
-              "ToolTip": "C:\\Users\\camat\\source\\repos\\Galaga\\Enemy.cs",
+              "ToolTip": "C:\\Users\\camat\\OneDrive\\Documentos\\P.O.O\\Galaga\\Enemy.cs",
               "RelativeToolTip": "Enemy.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T22:19:03.521Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-28T22:19:03.521Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "Bullet.cs",
-              "DocumentMoniker": "C:\\Users\\camat\\source\\repos\\Galaga\\Bullet.cs",
+              "DocumentMoniker": "C:\\Users\\camat\\OneDrive\\Documentos\\P.O.O\\Galaga\\Bullet.cs",
               "RelativeDocumentMoniker": "Bullet.cs",
-              "ToolTip": "C:\\Users\\camat\\source\\repos\\Galaga\\Bullet.cs",
+              "ToolTip": "C:\\Users\\camat\\OneDrive\\Documentos\\P.O.O\\Galaga\\Bullet.cs",
               "RelativeToolTip": "Bullet.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T22:19:02.82Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-28T22:19:02.82Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Game1.cs",
-              "DocumentMoniker": "C:\\Users\\camat\\source\\repos\\Galaga\\Game1.cs",
+              "DocumentMoniker": "C:\\Users\\camat\\OneDrive\\Documentos\\P.O.O\\Galaga\\Game1.cs",
               "RelativeDocumentMoniker": "Game1.cs",
-              "ToolTip": "C:\\Users\\camat\\source\\repos\\Galaga\\Game1.cs",
+              "ToolTip": "C:\\Users\\camat\\OneDrive\\Documentos\\P.O.O\\Galaga\\Game1.cs",
               "RelativeToolTip": "Game1.cs",
-              "ViewState": "AQIAAI0AAAAAAAAAAAAowIgAAAAjAAAA",
+              "ViewState": "AQIAAJwAAAAAAAAAAAAowEkAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-28T22:14:09.714Z",
               "EditorCaption": ""

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\camat\\source\\repos\\Galaga\\Galaga.csproj": {}
+    "C:\\Users\\camat\\OneDrive\\Documentos\\P.O.O\\Galaga\\Galaga.csproj": {}
   },
   "projects": {
-    "C:\\Users\\camat\\source\\repos\\Galaga\\Galaga.csproj": {
+    "C:\\Users\\camat\\OneDrive\\Documentos\\P.O.O\\Galaga\\Galaga.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\camat\\source\\repos\\Galaga\\Galaga.csproj",
+        "projectUniqueName": "C:\\Users\\camat\\OneDrive\\Documentos\\P.O.O\\Galaga\\Galaga.csproj",
         "projectName": "Galaga",
-        "projectPath": "C:\\Users\\camat\\source\\repos\\Galaga\\Galaga.csproj",
+        "projectPath": "C:\\Users\\camat\\OneDrive\\Documentos\\P.O.O\\Galaga\\Galaga.csproj",
         "packagesPath": "C:\\Users\\camat\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\camat\\source\\repos\\Galaga\\obj\\",
+        "outputPath": "C:\\Users\\camat\\OneDrive\\Documentos\\P.O.O\\Galaga\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

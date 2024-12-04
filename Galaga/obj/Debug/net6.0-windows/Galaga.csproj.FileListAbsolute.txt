@@ -41,3 +41,12 @@ C:\Users\camat\source\repos\Galaga\bin\Debug\net6.0-windows\Content\fondo.xnb
 C:\Users\camat\source\repos\Galaga\bin\Debug\net6.0-windows\Content\heart.xnb
 C:\Users\camat\source\repos\Galaga\bin\Debug\net6.0-windows\Content\player.xnb
 C:\Users\camat\source\repos\Galaga\bin\Debug\net6.0-windows\Content\ScoreFont.xnb
+C:\Users\camat\OneDrive\Documentos\P.O.O\Galaga\obj\Debug\net6.0-windows\Galaga.csproj.AssemblyReference.cache
+C:\Users\camat\OneDrive\Documentos\P.O.O\Galaga\obj\Debug\net6.0-windows\Galaga.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\camat\OneDrive\Documentos\P.O.O\Galaga\obj\Debug\net6.0-windows\Galaga.AssemblyInfoInputs.cache
+C:\Users\camat\OneDrive\Documentos\P.O.O\Galaga\obj\Debug\net6.0-windows\Galaga.AssemblyInfo.cs
+C:\Users\camat\OneDrive\Documentos\P.O.O\Galaga\obj\Debug\net6.0-windows\Galaga.csproj.CoreCompileInputs.cache
+C:\Users\camat\OneDrive\Documentos\P.O.O\Galaga\obj\Debug\net6.0-windows\Galaga.sourcelink.json
+C:\Users\camat\OneDrive\Documentos\P.O.O\Galaga\obj\Debug\net6.0-windows\Galaga.dll
+C:\Users\camat\OneDrive\Documentos\P.O.O\Galaga\obj\Debug\net6.0-windows\refint\Galaga.dll
+C:\Users\camat\OneDrive\Documentos\P.O.O\Galaga\obj\Debug\net6.0-windows\Galaga.pdb
