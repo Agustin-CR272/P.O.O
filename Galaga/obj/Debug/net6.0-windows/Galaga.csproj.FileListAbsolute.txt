@@ -50,3 +50,12 @@ C:\Users\camat\OneDrive\Documentos\P.O.O\Galaga\obj\Debug\net6.0-windows\Galaga.
 C:\Users\camat\OneDrive\Documentos\P.O.O\Galaga\obj\Debug\net6.0-windows\Galaga.dll
 C:\Users\camat\OneDrive\Documentos\P.O.O\Galaga\obj\Debug\net6.0-windows\refint\Galaga.dll
 C:\Users\camat\OneDrive\Documentos\P.O.O\Galaga\obj\Debug\net6.0-windows\Galaga.pdb
+C:\Users\A-11\Documents\P.O.O\Galaga\obj\Debug\net6.0-windows\Galaga.csproj.AssemblyReference.cache
+C:\Users\A-11\Documents\P.O.O\Galaga\obj\Debug\net6.0-windows\Galaga.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\A-11\Documents\P.O.O\Galaga\obj\Debug\net6.0-windows\Galaga.AssemblyInfoInputs.cache
+C:\Users\A-11\Documents\P.O.O\Galaga\obj\Debug\net6.0-windows\Galaga.AssemblyInfo.cs
+C:\Users\A-11\Documents\P.O.O\Galaga\obj\Debug\net6.0-windows\Galaga.csproj.CoreCompileInputs.cache
+C:\Users\A-11\Documents\P.O.O\Galaga\obj\Debug\net6.0-windows\Galaga.sourcelink.json
+C:\Users\A-11\Documents\P.O.O\Galaga\obj\Debug\net6.0-windows\Galaga.dll
+C:\Users\A-11\Documents\P.O.O\Galaga\obj\Debug\net6.0-windows\refint\Galaga.dll
+C:\Users\A-11\Documents\P.O.O\Galaga\obj\Debug\net6.0-windows\Galaga.pdb

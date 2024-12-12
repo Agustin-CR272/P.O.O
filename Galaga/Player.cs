@@ -21,7 +21,7 @@ namespace Galaga.GameObjects
         {
             textura = texture;
             posicion = startPosition;
-            vidas = 3;
+            vidas = 2;
         }
 
 

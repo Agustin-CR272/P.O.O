@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\camat\\OneDrive\\Documentos\\P.O.O\\Galaga\\Galaga.csproj": {}
+    "C:\\Users\\A-11\\Documents\\P.O.O\\Galaga\\Galaga.csproj": {}
   },
   "projects": {
-    "C:\\Users\\camat\\OneDrive\\Documentos\\P.O.O\\Galaga\\Galaga.csproj": {
+    "C:\\Users\\A-11\\Documents\\P.O.O\\Galaga\\Galaga.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\camat\\OneDrive\\Documentos\\P.O.O\\Galaga\\Galaga.csproj",
+        "projectUniqueName": "C:\\Users\\A-11\\Documents\\P.O.O\\Galaga\\Galaga.csproj",
         "projectName": "Galaga",
-        "projectPath": "C:\\Users\\camat\\OneDrive\\Documentos\\P.O.O\\Galaga\\Galaga.csproj",
-        "packagesPath": "C:\\Users\\camat\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\camat\\OneDrive\\Documentos\\P.O.O\\Galaga\\obj\\",
+        "projectPath": "C:\\Users\\A-11\\Documents\\P.O.O\\Galaga\\Galaga.csproj",
+        "packagesPath": "C:\\Users\\A-11\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\A-11\\Documents\\P.O.O\\Galaga\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\camat\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\A-11\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -77,7 +73,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303\\RuntimeIdentifierGraph.json"
         }
       }
     }
