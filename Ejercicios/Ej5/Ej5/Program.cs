@@ -6,40 +6,40 @@ namespace ej5
     {
         static void Main(string[] args)
         {
-            Serie[] seriesArray = new Serie[5];
-            Videojuego[] videojuegosArray = new Videojuego[5];
+            Serie[] series = new Serie[5];
+            Videojuego[] videojuegos = new Videojuego[5];
 
-            seriesArray[0] = new Serie("Breaking Bad", 3, true, "Accion y drogas", "Joaquin");
-            seriesArray[1] = new Serie("Un Show Mas", "Matias");
-            seriesArray[2] = new Serie("Stranger Things", "Netflix");
-            seriesArray[3] = new Serie("Okupas", "Martin");
-            seriesArray[4] = new Serie("Los Simpson", "Tobias");
+            series[0] = new Serie("Breaking Bad", 3, true, "Accion y drogas", "Joaquin");
+            series[1] = new Serie("Un Show Mas", "Jatniel");
+            series[2] = new Serie("Stranger Things", "Lautaro");
+            series[3] = new Serie("El zorro", "Juan");
+            series[4] = new Serie("Los Simpson", "Agustin");
 
-            videojuegosArray[0] = new Videojuego("The Last of Us", 15);
-            videojuegosArray[1] = new Videojuego("God of War", 20);
-            videojuegosArray[2] = new Videojuego("Warzone", 12);
-            videojuegosArray[3] = new Videojuego("Cyberpunk 2077", 25);
-            videojuegosArray[4] = new Videojuego("GTA 5", 65);
+            videojuegos[0] = new Videojuego("The Last of Us", 15);
+            videojuegos[1] = new Videojuego("God of War", 20);
+            videojuegos[2] = new Videojuego("Warzone", 12);
+            videojuegos[3] = new Videojuego("Cyberpunk 2077", 25);
+            videojuegos[4] = new Videojuego("GTA 5", 65);
 
-            seriesArray[0].entregar();
-            seriesArray[2].entregar();
-            videojuegosArray[1].entregar();
-            videojuegosArray[3].entregar();
+            series[0].entregar();
+            series[2].entregar();
+            videojuegos[1].entregar();
+            videojuegos[3].entregar();
 
             int seriesEntregadas = 0;
             int videojuegosEntregados = 0;
 
-            foreach (var serie in seriesArray)
+            foreach (var serie in series)
             {
-                if (serie.isEntregado())
+                if (serie.esEntregado())
                 {
                     seriesEntregadas++;
                 }
             }
 
-            foreach (var videojuego in videojuegosArray)
+            foreach (var videojuego in videojuegos)
             {
-                if (videojuego.isEntregado())
+                if (videojuego.esEntregado())
                 {
                     videojuegosEntregados++;
                 }
@@ -48,8 +48,8 @@ namespace ej5
             Console.WriteLine("Series entregadas: " + seriesEntregadas);
             Console.WriteLine("Videojuegos entregados: " + videojuegosEntregados);
 
-            Videojuego maxHoras = videojuegosArray[0];
-            foreach (var videojuego in videojuegosArray)
+            Videojuego maxHoras = videojuegos[0];
+            foreach (var videojuego in videojuegos)
             {
                 if (videojuego.horasEstimadasGet() > maxHoras.horasEstimadasGet())
                 {
@@ -57,8 +57,8 @@ namespace ej5
                 }
             }
 
-            Serie maxTemporadas = seriesArray[0];
-            foreach (var serie in seriesArray)
+            Serie maxTemporadas = series[0];
+            foreach (var serie in series)
             {
                 if (serie.numeroTemporadaGet() > maxTemporadas.numeroTemporadaGet())
                 {
@@ -77,7 +77,7 @@ namespace ej5
     {
         void entregar();
         void devolver();
-        bool isEntregado();
+        bool esEntregado();
         int compareTo(Object a);
 
     }
@@ -136,7 +136,7 @@ namespace ej5
         { Entregado = true; }
         public void devolver()
         { Entregado = false; }
-        public bool isEntregado()
+        public bool esEntregado()
         { return Entregado; }
         public int compareTo(object a)
         {
@@ -209,7 +209,7 @@ namespace ej5
         { entregado = true; }
         public void devolver()
         { entregado = false; }
-        public bool isEntregado()
+        public bool esEntregado()
         { return entregado; }
 
         public int compareTo(object a)

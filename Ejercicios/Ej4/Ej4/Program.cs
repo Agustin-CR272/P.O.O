@@ -191,7 +191,6 @@ namespace Ej4
 
             }
 
-
             public int getCarga
             {
                 get { return Carga; }

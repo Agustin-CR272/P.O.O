@@ -6,24 +6,24 @@ namespace Ej2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Nombre=");
+            Console.WriteLine("Nombre: ");
             string Nombre = Console.ReadLine();
-            Console.WriteLine("Edad=");
+            Console.WriteLine("Edad: ");
             int Edad = int.Parse(Console.ReadLine());
-            Console.WriteLine("Sexo H o M=");
+            Console.WriteLine("Sexo H o M: ");
             char Sexo = char.Parse(Console.ReadLine());
-            Console.WriteLine("Peso=");
+            Console.WriteLine("Peso: ");
             double Peso = double.Parse(Console.ReadLine());
-            Console.WriteLine("Altura=");
+            Console.WriteLine("Altura: ");
             double Altura = double.Parse(Console.ReadLine());
 
             Persona a = new Persona(Nombre, Edad, Sexo, Peso, Altura);
             Persona b = new Persona(Nombre, Edad, Sexo);
             Persona c = new Persona();
 
-            Console.WriteLine("El IMC es= " + a.calcularIMC());
-            Console.WriteLine("El IMC es= " + b.calcularIMC());
-            Console.WriteLine("El IMC es= " + c.calcularIMC());
+            Console.WriteLine("El IMC es: " + a.calcularIMC());
+            Console.WriteLine("El IMC es: " + b.calcularIMC());
+            Console.WriteLine("El IMC es: " + c.calcularIMC());
 
             Console.WriteLine("Su edad es mayor?" + a.EsMayorDeEdad());
             Console.WriteLine("Su edad es mayor?" + b.EsMayorDeEdad());

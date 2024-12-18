@@ -10,7 +10,8 @@ namespace Ej1
     {
         static void Main(string[] args)
         {
-            Console.ReadKey();        
+            Console.ReadKey();
+            
         }
     }
 
@@ -30,7 +31,7 @@ namespace Ej1
         {
             Console.WriteLine("Ingrese el monto:");
             double cantidad = double.Parse(Console.ReadLine());
-            total = total + cantidad;
+            total = cantidad;
             Console.WriteLine("Ingresado correctamente.");
             Console.WriteLine("Su nuevo saldo total es " + total);
             Console.ReadKey();

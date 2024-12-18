@@ -7,13 +7,13 @@ namespace Ejer13
     {
         static void Main(string[] args)
         {
-            Repartidor repartidor1 = new Repartidor("pablo", 23, 232, "zona 3");
-            Comercial comercial1 = new Comercial("martin", 31, 400, 300);
+            Repartidor repartidor1 = new Repartidor("joaco", 23, 232, "zona 3");
+            Comercial comercial1 = new Comercial("jatniel", 31, 400, 300);
 
             repartidor1.PLUSrepartidor();
             comercial1.PLUScomercial();
 
-            Console.WriteLine($"El salario de " + repartidor1.Nombre + " es " + repartidor1.Salario);
+            Console.WriteLine("El salario de " + repartidor1.Nombre + " es " + repartidor1.Salario);
             Console.WriteLine("El salario de " + comercial1.Nombre + " es " + comercial1.Salario);
             Console.ReadKey();
         }
@@ -40,9 +40,7 @@ namespace Ejer13
             public Repartidor(string Nombre, int Edad, int Salario, string zona) : base(Nombre, Edad, Salario)
             {
                 this.zona = zona;
-                this.Nombre = Nombre;
-                this.Edad = Edad;
-                this.Salario = Salario;
+
             }
 
             public void PLUSrepartidor()
